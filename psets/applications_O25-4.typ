@@ -24,7 +24,7 @@
 #set document(
   author: "César Pérez",
   date: datetime.today(),
-  title: "Title change",
+  title: "Applications O25-4",
 )
 #show title: set text(size: 20pt, weight: "bold")
 #show title: set align(center)
@@ -112,3 +112,36 @@
 #title()
 #displayauthor()
 #pagebreak()
+
+= Ejercicios
+
+== Ejercicio 5.
+
+Sea $bold(u) = (4600, 4290, 5250)$, el vector que representa las unidades fabricadas de tres modelos de teléfonos celulares, $bold(v) = (499.99, 199.99, 99.99)$, el vector que representa los precios (en dólares) de cada modelo.
+
+El producto punto se calcula como: 
+
+$
+bold(u) ⋅ bold(v) = (4600)(499.99) + (4290)(199.99) + (5250)(99.99)
+$
+
+Calculamos cada término:
+
+$
+(4600)(499.99) = 2,299,954; (4290)(199.99) = 857,957.10; (5250)(99.99) = 524,947.50
+$
+
+Sumando los resultados:
+
+$
+bold(u) ⋅ bold(v) = 2,299,954 + 857,957.10 + 524,947.50 = 3,682,858.60
+$
+
+El producto punto es:
+
+$
+bold(u) ⋅ bold(v) = 3,682,858.60
+\ "dolares"
+$
+
+Este valor representa el *ingreso total* que se obtendría al vender todas las unidades fabricadas de los tres modelos de teléfonos celulares.
