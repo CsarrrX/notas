@@ -1,0 +1,70 @@
+% preamble.tex
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-nodecimaldot,mexico]{babel} % Español mx, mantiene el punto decimal
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
+
+% --- PAQUETES MATEMÁTICOS ---
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}     % Para teoremas sin cajitas
+\usepackage{mathtools}
+
+% --- GRÁFICOS (INKSCAPE SETUP) ---
+\usepackage{graphicx}
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{xcolor}
+\usepackage{float}
+
+% Comando para importar figuras de Inkscape
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+% --- HEADERS Y FOOTERS (Estilo imagen) ---
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % Limpiar todo
+
+% Configuración del Header: Línea abajo y Sección a la derecha
+\setlength{\headheight}{15pt}
+\renewcommand{\headrulewidth}{0.4pt} % Grosor de la línea
+\fancyhead[R]{\nouppercase{\leftmark}} % Nombre de la sección (Clase) a la derecha
+\fancyhead[L]{} % Izquierda vacía
+
+% Footer: Número de página al centro
+\fancyfoot[C]{\thepage}
+
+% --- TEOREMAS (Estilo Clásico) ---
+\theoremstyle{definition} % Título en negrita, texto normal (mejor para notas)
+\newtheorem{teorema}{Teorema}[section]
+\newtheorem{lema}[teorema]{Lema}
+\newtheorem{definicion}[teorema]{Definición}
+\newtheorem{ejemplo}[teorema]{Ejemplo}
+\newtheorem{nota}[teorema]{Nota}
+\newtheorem{demostracion}{Demostración}
+
+% --- COMANDO PARA LA PORTADA ---
+\newcommand{\crearportada}{
+    \begin{titlepage}
+        \centering
+        \vspace*{2cm}
+        
+        {\Huge \textbf{\materia} \par}
+        \vspace{1cm}
+        {\Large \textbf{Clave:} \clave \par}
+        \vspace{0.5cm}
+        {\Large \semestre \par}
+        
+        \vspace{4cm}
+        \textbf{\Large \usuario}
+        
+        \vfill
+        {\large \today \par}
+    \end{titlepage}
+}
