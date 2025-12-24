@@ -82,7 +82,7 @@ Más abajo se documentan los plugins y snippets principales usados aquí.
 - Dentro de cada semestre hay una carpeta por curso.
 - Para simplificar el acceso, uso un **symlink** (cursoact) que apuntan al curso activo mediante un script de hora que se encuentra en mi .zshrc.
 - Hay funciones en mi `.zshrc` para automatizar navegación y creación de archivos.
-  - `view` abre con Zathura el pdf de la matería actual, y  `curso` cambia la dirección del symlink al que se especifique, update_curso cambia el curso conforme a mi horario. Además, mis dotfiles vienen con un script de tmux que inicializa todo por tí, solo hay que empezar a escribir. 
+  - `view` abre con Zathura el pdf de la matería actual, y  `curso` cambia la dirección del symlink al que se especifique, `update_curso` cambia el curso conforme a mi horario. Además, mis dotfiles vienen con un script de tmux que inicializa todo por tí, solo hay que empezar a escribir. 
 
 Todo esto también está documentado en mis dotfiles.
 
