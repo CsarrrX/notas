@@ -1,6 +1,6 @@
 \section{Lógica}
 
-Esta sección se basa en gran medida en el \textbf{Apéndice A} del libro \textit{Analysis I} de Terence Tao. Su objetivo es introducir los fundamentos de la \textbf{lógica matemática}, entendida como el lenguaje formal de las demostraciones. El estudio de está es indispensable, ya que en matemáticas nos interesa establecer verdades absolutas. Si bien existen otros sistemas lógicos que consideran nociones de verdad no absoluta, estos no son relevantes para los fines de las presentes notas.
+Esta sección se basa en gran medida en el \textbf{Apéndice A} del libro \textit{Analysis I} de Terence Tao. Su objetivo es introducir los fundamentos de la \textbf{lógica matemática}, entendida como el lenguaje formal de las demostraciones. El estudio de esta es indispensable, ya que en matemáticas nos interesa establecer verdades absolutas. Si bien existen otros sistemas lógicos que consideran nociones de verdad no absoluta, estos no son relevantes para los fines de las presentes notas.
 
 \subsection{Enunciados matemáticos}
 
@@ -13,19 +13,19 @@ Todo argumento matemático está formado por \textit{enunciados matemáticos}. E
 Cabe notar que no toda combinación de símbolos matemáticos es un enunciado matemático, por ejemplo la combinación: $= 2 + + 4 = + = 1$ \textbf{no} es un enunciado matemático y se le llama \textit{mal-formado} o \textit{mal-definido}. Este tipo de enunciados no tienen ningún valor de verdad.
 
 \begin{ejemplo}\label{ej2}
-    $\frac{0}{0} = 1$ es un ejemplo un poco mas sútil de un enunciado mal-definido, esto ya que la división sobre 0 no esta definida.
+    $\frac{0}{0} = 1$ es un ejemplo un poco más sutil de un enunciado mal-definido, esto ya que la división sobre 0 no está definida.
 \end{ejemplo}
 
-Un argumento matemático no debe contener ningún enunciado mal formado, entonces, si por ejemplo tenemos la expresion $\frac{x}{y} = z$ tenemos que asegurarnos $y \neq 0$.
+Un argumento matemático no debe contener ningún enunciado mal formado, entonces, si por ejemplo tenemos la expresión $\frac{x}{y} = z$ tenemos que asegurarnos $y \neq 0$.
 Es importante señalar que, en la lógica matemática, la veracidad o falsedad de un enunciado es una propiedad inherente del mismo y no depende de la opinión de quien lo enuncia o interpreta. Esta característica junto con el valor de verdad bien definido de los enunciados fundamenta un método clásico de demostración: para establecer la veracidad de un enunciado, puede suponerse su falsedad y, a partir de dicha suposición, derivar una contradicción lógica (el método se abarca más adelante).
 
 \begin{nota}
     Básicamente, para demostrar que un enunciado es verdadero, basta con demostrar que no es falso, y de la misma forma, para demostrar que falso, basta con demostrar que no es verdadero.
 \end{nota}
 
-Ahora, que un enunciado sea verdadero, no significa que sea útil o eficiente. Por ejemplo el enunciado $2 = 2$ es verdadero, pero esta lejos de ser algo útil. O el enunciado $4 \leq 4$ también es verdadero, pero no muy eficiente ($4 = 4$ es más preciso). Y visceversa, un enunciado puede ser falso pero muy útil, por ejemplo $\pi = 3.1416$ es falso, sin embargo es muy útil como una \textit{aproximación}. 
+Ahora, que un enunciado sea verdadero, no significa que sea útil o eficiente. Por ejemplo el enunciado $2 = 2$ es verdadero, pero esta lejos de ser algo útil. O el enunciado $4 \leq 4$ también es verdadero, pero no muy eficiente ($4 = 4$ es más preciso). Y viceversa, un enunciado puede ser falso pero muy útil, por ejemplo $\pi = 3.1416$ es falso, sin embargo es muy útil como una \textit{aproximación}. 
 
-En razonamiento matemático, solo nos importa la \textbf{verdad}, no tanto la útilidad ni eficiencia; esto ya que la verdad es objetiva, podemos deducir enunciados verdaderos de reglas precisas, mientras que la útilidad y eficiencia subjetivas, dependen de la opinión del observador.
+En razonamiento matemático, solo nos importa la \textbf{verdad}, no tanto la utilidad ni eficiencia; esto ya que la verdad es objetiva, podemos deducir enunciados verdaderos de reglas precisas, mientras que la utilidad y eficiencia subjetivas, dependen de la opinión del observador.
 
 Los enunciados son diferentes de las \textit{expresiones}. Como ya vimos los enunciados son verdaderos o falsos, mientras que las expresiones son \textit{secuencias} de caracteres matemáticos que producen un objeto matemático, por ejemplo, $2 \cdot 3 + 5$ es una expresión cuyo resultado es un número. Mientras que $ 2 \cdot 3 + 5 = 9$ es un enunciado, no una expresión. Como con los enunciados, las expresiones pueden ser bien o mal definidas, $2 + \frac{3}{0}$ es una expresión mal-definida. Ejemplos más sutiles de expresiones así ocurren, por ejemplo, cuando intentamos multiplicar matrices con dimensiones mal definidas, evaluamos funciones fuera de su dominio, etc. 
 Podemos crear enunciados con expresiones al hacer uso de \textit{relaciones} (como $=, <, \in$, etc.) o propiedades (como: <<es primo>>, <<es continua>>, <<es invertible>>, etc.), por ejemplo, <<$3 + 2$ es un número primo>> o $3 + 28 < 40$ son enunciados matemáticos.
@@ -57,22 +57,22 @@ En lógica matemática, los conectores lógicos constituyen las herramientas fun
 \end{definicion}
 
 
-Primero, la negación convierte la conjunción en disyunción y visceversa, por ejemplo, la proposición <<($p$ y $q$) es falsa>> se convierte en <<$p$ es falsa o $q$ es falsa>> (notese que también invierte el valor de verdad de los enunciados), y de la misma forma si tenemos <<($p$ o $q$) es falsa>> se convierte en <<$p$ es falsa y $q$ es falsa>>. Otra regla es que la doble negación se cancela, es decir, si tenemos un enunciado $p$ y la proposición <<$p$ es falso>>, la negación de esta proposición es <<$p$ es verdadero>>. 
+Primero, la negación convierte la conjunción en disyunción y viceversa, por ejemplo, la proposición <<($p$ y $q$) es falsa>> se convierte en <<$p$ es falsa o $q$ es falsa>> (nótese que también invierte el valor de verdad de los enunciados), y de la misma forma si tenemos <<($p$ o $q$) es falsa>> se convierte en <<$p$ es falsa y $q$ es falsa>>. Otra regla es que la doble negación se cancela, es decir, si tenemos un enunciado $p$ y la proposición <<$p$ es falso>>, la negación de esta proposición es <<$p$ es verdadero>>. 
 
 \begin{ejemplo}
     Un ejemplo común de la negación se da en intervalos, por ejemplo, para negar $1 < x < 2$ tenemos que partir la proposición en $1 < x$ y $2 > x$ ahora, aplicando la regla para negarlo tenemos $1 \geq x$ o $2 \leq x$.
 \end{ejemplo}
 
-El dominio de la negación de proposiciones se da practicandola, no es algo particularmente complejo, sin embargo más adelante presentaremos cuantificadores y variables, los cuales conllevaran nuevas reglas de negación, entonces es importante recordar estas reglas básicas (también conocidas como las leyes de De Morgan).
+El dominio de la negación de proposiciones se da practicándola, no es algo particularmente complejo, sin embargo más adelante presentaremos cuantificadores y variables, los cuales conllevarán nuevas reglas de negación, entonces es importante recordar estas reglas básicas (también conocidas como las leyes de De Morgan).
 
 \begin{definicion}[Si y solo si ($\iff$)] 
-    Si $p$ es un enunciado y $q$ es un enunciado, decimos <<$p$ es verdad si y solo si $q$ es verdad>> cuando son \textit{lógicamente equivalentes}, es decir, si $p$ es verdad $q$ es verdad, y si $p$ es falso entonces $q$ es falso, y de la misma forma, tenemos que si $q$ es verdadero, $p$ es verdadero y si $q$ es falso, entonces $p$ es falso.   
+    Si $p$ es un enunciado y $q$ es un enunciado, decimos <<$p$ es verdadero si y solo si $q$ es verdadero>> cuando son \textit{lógicamente equivalentes}, es decir, si $p$ es verdadero $q$ es verdadero, y si $p$ es falso entonces $q$ es falso, y de la misma forma, tenemos que si $q$ es verdadero, $p$ es verdadero y si $q$ es falso, entonces $p$ es falso.   
 \end{definicion}
 
 
 \subsubsection{Implicación}
 
-Hemos llegado a el conector lógico menos intuitivo, la \textbf{implicación} ($\implies$). Si $p$ es un enunciado y $q$ es un enunciado, entonces <<si $p$ entonces $q$>> es la implicación de $p$ a $q$. El significado de la sentencia <<si $p$, entonces $q$>> depende de si $p$ es verdadero o falso. Si $p$ es verdadero, entonces <<si $p$, entonces $q$>> es verdadero cuando $q$ es verdadero, y falso cuando $q$ es falso. Si, por el contrario, $p$ es falso, entonces <<si $p$, entonces $q$>> es siempre verdadero, independientemente de si $q$ es verdadero o falso. Dicho de otra manera, cuando $p$ es verdadero, la sentencia <<si $p$, entonces $q$>> implica que $q$ es verdadero. Pero cuando $p$ es falso, la sentencia <<si $p$, entonces $q$>> no ofrece información sobre si $q$ es verdadero o no; la sentencia es verdadera, pero vacua (es decir, no transmite ninguna información nueva más allá del hecho de que la hipótesis es falsa).
+Hemos llegado al conector lógico menos intuitivo, la \textbf{implicación} ($\implies$). Si $p$ y $q$ son enunciados, entonces la proposición <<si $p$ entonces $q$>> es la implicación de $p$ a $q$. El significado de la proposición <<si $p$, entonces $q$>> depende de si $p$ es verdadero o falso. Si $p$ es verdadero, entonces <<si $p$, entonces $q$>> es verdadero cuando $q$ es verdadero, y falso cuando $q$ es falso. Si, por el contrario, $p$ es falso, entonces <<si $p$, entonces $q$>> es siempre verdadero, independientemente de si $q$ es verdadero o falso. Dicho de otra manera, cuando $p$ es verdadero, la proposición <<si $p$, entonces $q$>> implica que $q$ es verdadero. Pero cuando $p$ es falso, la proposición <<si $p$, entonces $q$>> no ofrece información sobre si $q$ es verdadero o no; la proposición es verdadera, pero vacua (es decir, no transmite ninguna información nueva más allá del hecho de que la hipótesis es falsa).
 
 \begin{nota}
     Una forma más intuitiva de entenderlo es con un ejemplo. Sean $p$: <<llueve>> y $q$: <<el suelo está mojado>>. La implicación <<si $p$, entonces $q$>> funciona como una regla o promesa:
@@ -127,7 +127,7 @@ Hay casos particulares y equivalencias de implicación, por ejemplo:
 \end{proposicion}
 
 \begin{proof}
-    \textbf{Asumimos lo contrario:} supongamos que existe un número entero $N$ mayor que todos los demás. \textbf{Derivamos una consecuencia y un absurdo (contradicción):} por propiedades númericas sabemos que $N + 1$ es un número mayor y es entero, entonces llegamos a que $N$ es el entero más grande y al mismo tiempo no es el entero más grande. Por lo tanto no puede existir un número entero más grande que todos los demás. 
+    \textbf{Asumimos lo contrario:} supongamos que existe un número entero $N$ mayor que todos los demás. \textbf{Derivamos una consecuencia y un absurdo (contradicción):} por propiedades numéricas sabemos que $N + 1$ es un número mayor y es entero, entonces llegamos a que $N$ es el entero más grande y al mismo tiempo no es el entero más grande. Por lo tanto no puede existir un número entero más grande que todos los demás. 
 \end{proof}
 
 \subsection{La estructura de las demostraciones}
@@ -139,22 +139,22 @@ Para demostrar una proposición, uno normalmente empieza asumiendo la hipótesis
 \end{proposicion}
 
 \begin{proof}
-    Asumimos $A$ es verdad. Como $A$ es verdad, $C$ es verdad. Como $C$ es verdad, $D$ es verdad. Como $D$ es verdad, $B$ es verdad, como queríamos. 
+    Asumimos $A$ es verdadero. Como $A$ es verdadero, $C$ es verdadero. Como $C$ es verdadero, $D$ es verdadero. Como $D$ es verdadero, $B$ es verdadero, como queríamos. 
 \end{proof}
 
-Pero esta no es la única forma de demostrar esto, también podemos trabajar desde la conclusión (nunca asumiendola como verdadera) y viendo que se necesitaría para que se cumpliera la implicación. Por ejemplo una demostración típica de \ref{prop1} se vería así:
+Pero esta no es la única forma de demostrar esto, también podemos trabajar desde la conclusión (nunca asumiéndola como verdadera) y viendo que se necesitaría para que se cumpliera la implicación. Por ejemplo una demostración típica de \cref{prop1} se vería así:
 
 \begin{proof}
     Para demostrar $B$, bastaría con demostrar $D$. Como $C$ implica $D$, solo tenemos que demostrar $C$. Pero $C$ sigue de $A$. 
 \end{proof}
 
-O también podemos aplicar una combinación de ambos enfoques de demostración, por ejemplo otra demostración valida de \ref{prop1} sería:
+O también podemos aplicar una combinación de ambos enfoques de demostración, por ejemplo otra demostración válida de \cref{prop1} sería:
 
 \begin{proof}
     Para demostrar $B$, bastaría con demostrar $D$. Entonces ahora demostremos $D$. Como tenemos $A$ por hipótesis, tenemos $C$. Como $C$ implica $D$, tenemos $D$ como queríamos.
 \end{proof}
 
-Las demostraciones pasadas fueron muy sencillas y simples de entender ya que solo hay una hipótesis y una conclusión. Sin embargo cuando hay múltiples hipótesis y conclusiones la demostración se divide en casos, entonces se pueden volver mas complicadas. Por ejemplo: 
+Las demostraciones pasadas fueron muy sencillas y simples de entender ya que solo hay una hipótesis y una conclusión. Sin embargo cuando hay múltiples hipótesis y conclusiones la demostración se divide en casos, entonces se pueden volver más complicadas. Por ejemplo: 
 
 \begin{proposicion}
 Suponga que $A$ y $B$ son verdaderas. Entonces $C$ y $D$ son verdaderas.
@@ -178,14 +178,14 @@ Como se puede ver hay muchos enfoques para resolver problemas, sin embargo en al
 
 \subsection{Variables y cuantificadores}
 
-Uno puede llegar muy lejos usando solamente enunciados primitivos (como $2 + 2 = 4$ o <<yo tengo el pelo blanco>>), conectandolos con lógica, y construyendo hipótesis y conclusiones a base de ello, a esto se le conoce como \textit{lógica booleana}. Sin embargo para la matemática este nivel de lógica no es suficiente, ya que no contiene el concepto fundamental de las \textit{variables}, una \textit{variable} es un simbolo, como $x$ o $n$ que denota un objeto matemático (un entero, vector, función, matriz, etc.) casi en todas las situaciones el \textit{tipo} del objeto debería de declararse, de otra forma, sería difícil formar enunciados bien-definidos a partir de ellos. Además, podemos formar expresiones y enunciados con estas variables, por ejemplo si $x$ es un número real, $x + 3$ es una expresión y $x + 3 = 5$ es un enunciado. Sin embargo, la veracidad del enunciado esta ligada a la variable, en este caso tenemos que el enunciado es verdad \textbf{si y solo si} $x = 2$. Una \textbf{variable libre} es un símbolo cuyo valor no está especificado (ej. $x+3=5$), por lo que la sentencia carece de un valor de verdad definido. En contraste, una \textbf{variable ligada} ocurre cuando se fija su valor (ej. "Sea $x=2$") o se limita mediante cuantificadores, otorgando a la sentencia un valor de verdad definido.
+Uno puede llegar muy lejos usando solamente enunciados primitivos (como $2 + 2 = 4$ o <<yo tengo el pelo blanco>>), conectándolos con lógica, y construyendo hipótesis y conclusiones a base de ello, a esto se le conoce como \textit{lógica booleana}. Sin embargo para la matemática este nivel de lógica no es suficiente, ya que no contiene el concepto fundamental de las \textit{variables}, una \textit{variable} es un símbolo, como $x$ o $n$ que denota un objeto matemático (un entero, vector, función, matriz, etc.) casi en todas las situaciones el \textit{tipo} del objeto debería de declararse, de otra forma, sería difícil formar enunciados bien-definidos a partir de ellos. Además, podemos formar expresiones y enunciados con estas variables, por ejemplo si $x$ es un número real, $x + 3$ es una expresión y $x + 3 = 5$ es un enunciado. Sin embargo, la veracidad del enunciado está ligada a la variable, en este caso tenemos que el enunciado es verdadero \textbf{si y solo si} $x = 2$. Una \textbf{variable libre} es un símbolo cuyo valor no está especificado (ej. $x+3=5$), por lo que la expresión carece de un valor de verdad definido. En contraste, una \textbf{variable ligada} ocurre cuando se fija su valor (ej. "Sea $x=2$") o se limita mediante cuantificadores, otorgando al enunciado un valor de verdad definido.
 
 \begin{itemize}
-    \item \textbf{Cuantificador Universal ($\forall$):} La sentencia $\forall x \in T, P(x)$ significa que $P(x)$ es verdadero para todo elemento de tipo $T$. Se demuestra asumiendo un $x$ arbitrario y se refuta con un solo \textbf{contraejemplo}. Si no existen elementos en $T$, la sentencia es \textbf{vacuamente verdadera}.
-    \item \textbf{Cuantificador Existencial ($\exists$):} La sentencia $\exists x \in T : P(x)$ significa que existe al menos un $x$ para el cual $P(x)$ es verdadero. Basta con exhibir un ejemplo específico para probarla.
+    \item \textbf{Cuantificador Universal ($\forall$):} La proposición $\forall x \in T, P(x)$ significa que $P(x)$ es verdadero para todo elemento de tipo $T$. Se demuestra asumiendo un $x$ arbitrario y se refuta con un solo \textbf{contraejemplo}. Si no existen elementos en $T$, la proposición es \textbf{vacuamente verdadera}.
+    \item \textbf{Cuantificador Existencial ($\exists$):} La proposición $\exists x \in T : P(x)$ significa que existe al menos un $x$ para el cual $P(x)$ es verdadero. Basta con exhibir un ejemplo específico para probarla.
 \end{itemize}
 
-Decir que algo es cierto para todo $x$ es una afirmación mucho más fuerte que decir que es cierto para algún $x$, excepto cuando el dominio es vacío (donde el $\forall$ es vacuo y el $\exists$ es falso). Ya habíamos hablado de negación de ciertos tipos de conectores lógicos, ahora tenemos que la negación de una sentencia universal produce una existencial y viceversa:
+Decir que algo es cierto para todo $x$ es una afirmación mucho más fuerte que decir que es cierto para algún $x$, excepto cuando el dominio es vacío (donde el $\forall$ es vacuo y el $\exists$ es falso). Ya habíamos hablado de negación de ciertos tipos de conectores lógicos, ahora tenemos que la negación de una proposición universal produce una existencial y viceversa:
 \begin{itemize}
     \item $\neg(\forall x, P(x)) \iff \exists x, \neg P(x)$: Negar que todos los cisnes son blancos equivale a decir que existe al menos uno que no lo es.
     \item $\neg(\exists x, P(x)) \iff \forall x, \neg P(x)$: Negar la existencia de un cisne negro equivale a decir que todos los cisnes no son negros.

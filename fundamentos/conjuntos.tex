@@ -1,1 +1,154 @@
-\section{Conjuntos}
+\section{Teoría de conjuntos ZFC}
+
+Esta sección presenta las bases de la axiomatización estándar de la teoría de conjuntos que formularon Ernst Zermelo y Adolf Frankel, junto con el axioma de elección (axiom of choice). Este conjunto de postulados permite la construcción de estructuras complejas; proporcionando reglas de existencia y operación para los objetos matemáticos que conforman el continuum.
+
+\subsection{Axiomas y propiedades básicas de conjuntos}
+
+\begin{definicion}\label{dfn2.1}
+    Un \textit{conjunto} es una colección de objetos que satisfacen un grupo de axiomas. Cada objeto en el conjunto se le llama un \textit{elemento} del conjunto.
+\end{definicion}
+
+\begin{nota}
+    En casi todas las construcciones de objetos matemáticos lo primero que hacemos es definir una \textit{relación}, \textit{operación} o \textit{propiedad} atómica, que nos ayude a construir todo lo demás, en este caso es la \textit{propiedad de pertencia} y se denota con $\in$. De este modo, leemos $X \in Y$ como <<$X$ pertenece a $Y$>> o <<$X$ es un elemento de $Y$>>.
+\end{nota}
+
+Como los axiomas forman parte de la definición de un conjunto, necesitamos un axioma que garantice que los conjuntos existen, más en concreto que al menos un conjunto existe.
+
+\begin{axioma}[Existencia]\label{axm2.1}
+    Existe un conjunto que no tiene elementos.
+\end{axioma}
+
+Ahora que hemos establecido la existencia de un conjunto, necesitamos una forma de mostrar unicidad de conjuntos. De forma que solo exista un conjunto que no tiene elementos. Para esto necesitamos del siguiente axioma.
+
+\begin{axioma}[Extensionalidad]\label{axm2.2}
+    Si cada elemento de $X$ es un elemento de $Y$ y cada elemento de $Y$ es un elemento $X$, entonces $X = Y$.
+\end{axioma}
+
+De este axioma podemos ver que la \textit{igualdad de conjuntos $X$ y $Y$} es una propiedad basada en los elementos contenidos en $X$ y $Y$. Ahora podemos demostrar la unicidad del conjunto sin elementos.
+
+\begin{lema}\label{lm2.1}
+    Existe solo un conjunto con ningún elemento.
+\end{lema}
+
+\begin{proof}
+    Supongamos que existen dos conjuntos $A$ y $B$ los cuales no tienen ningún elemento. Si $x \in A$ entonces $x \in B$, y si $y \in B$ entonces $y \in A$. Por lo tanto por axioma de extensionalidad, $A = B$. (Ambas implicaciones son verdaderas ya que son vacuas).
+\end{proof}
+
+\begin{definicion}\label{dfn2.2}
+    A este único conjunto sin elementos le llamaremos el conjunto vacío y lo denotaremos con $\emptyset$.
+\end{definicion}
+
+Hasta el momento hemos lidiado con la existencia única de un conjunto, por supuesto ahora nos interesaría verificar la existencia y unicidad de otros conjuntos.
+
+\begin{nota}
+    Es importante recalcar que todos los axiomas que se presentarán de ahora en adelante sirven como <<filtros>>, nos ayudan a hacer una construcción libre de paradojas; siempre que construimos una nueva <<área>> de matemáticas hay que tomar en cuenta que los axiomas propuestos son nuestra forma de delimitar y lidiar con problemas de definición más adelante.
+\end{nota}
+
+\begin{axioma}[Esquema de comprensión]\label{axm2.3}
+    Sea $P(x)$ una propiedad de $x$. Para cualquier conjunto $A$, existe un conjunto $B$, tal que: $x \in B$ si y solo si $x \in A$ y $P(x)$ se cumple.
+\end{axioma}
+
+Necesitamos el Esquema de comprensión ya que permite crear conjuntos exclusivamente a partir de un \textbf{conjunto existente} usando una propiedad $P(x)$. Sin el podríamos crear conjuntos a partir de cualquier propiedad sin restringirnos a un conjunto previo $A$, y caeríamos en la \textbf{paradoja de Russell}, la cual básicamente dice que podríamos definir <<el conjunto de todos los conjuntos que no se contienen a sí mismos>>, lo cual es una contradicción lógica. Este axioma obliga que el conjunto sea <<hijo>> de uno ya conocido, lo que limita su tamaño.
+
+\begin{lema}\label{lm2.2}
+    Para cada conjunto $A$, existe un conjunto único $B$ tal que $x \in B$ si y solo si $x \in A$ y $P(x)$ se cumple. 
+\end{lema}
+
+\begin{proof} 
+    Supongamos $B'$ es otro conjunto tal que $x \in B'$ si y solo si $x \in A$ y $P(x)$ se cumple. Dado esto, si $x \in B$ implica que $x \in A$ y $P(x)$ se cumple, pero entonces $x \in B'$. De la misma forma, si $x \in B'$ implica que $x \in A$ y $P(x)$ se cumple, pero esto implica que $x \in B$. Dado esto, tenemos $x \in B$ si y solo si $x \in B'$. Por lo tanto $B = B'$.
+\end{proof}
+
+Este lema se necesita ya que si hubieran dos conjuntos diferentes $B$ y $B'$ que cumplieran la misma propiedad, la expresión <<el conjunto de los $x$ que cumplen $P(x)$>> sería ambigua. Además si la unicidad fallara, dos personas podrían seguir las mismas reglas lógicas y obtener resultados diferentes, lo que destruiría la objetividad de la materia.
+
+\begin{axioma}[De par]\label{axm2.4}
+    Para cualquier par de conjuntos $A$ y $B$, existe un conjunto $C$ tal que $x \in C$ si y solo si $x = A$ o $x = B$.
+\end{axioma}
+
+\begin{definicion}\label{dfn2.3}
+    Definimos el par no ordenado de los conjuntos $A$ y $B$ como el conjunto teniendo exactamente $A$ y $B$ como sus elementos y usamos $\left\{ A, B \right\}$ para denotarlo.
+\end{definicion}
+
+Este axioma garantiza que dados dos conjuntos cualesquiera, existe un tercer conjunto que los contiene exactamente a los dos, nos ayuda ya que relaciona entre sí a conjuntos individuales en una sola estructura. La definición subsequente le da un nombre al tercer conjunto: \textit{el par no ordenado}.
+
+\begin{axioma}[De unión]\label{axm2.5}
+    Para cualquier conjunto $S$, existe un conjunto $U$ tal que $x \in U$ si y solo si $\exists A \in S$ tal que $x \in A$.
+\end{axioma}
+
+\begin{definicion}\label{dfn2.4}
+    Llamamos al conjunto $U$ la unión de $S$ y lo denotamos por $\bigcup S$.
+\end{definicion}
+
+\begin{definicion}\label{dfn2.5}
+    Llamamos a $A$ un \textit{subconjunto} de $B$ si todo elemento de $A$ pertenece a $B$. Lo denotamos como $A \subseteq B$.
+\end{definicion}
+
+\begin{ejemplo} (Informal)
+    Sea $S = \left\{ A, B \right\}, A = \left\{ 1, 2 \right\}, B = \left\{ 2, 3 \right\}$, entonces por el axioma tenemos que como $1$ pertenece a algún conjunto de $S (A)$, entonces $1 \in \bigcup S$, lo mismo con $2, 3$. Los tres pertenecen a \textit{algún} conjunto de $S$, entonces pertenecen a $\bigcup S$
+\end{ejemplo}
+
+Este axioma nos permite <<desempaquetar>> elementos de conjuntos, básicamente, permite colapsar estructuras jerárquicas en conjuntos planos. Se podría ver como el inverso del \cref{axm2.4}, mientras uno agrupa el otro fusiona.
+
+\begin{axioma}[Conjunto potencia]\label{axm2.6}
+    Para cualquier conjunto $S$, existe un conjunto $P$ tal que $X \in P$ si y solo si $X \subseteq S$.
+\end{axioma}
+
+\begin{definicion}\label{dfn2.6}
+    Llamamos a $P$ el \textit{conjunto potencia} de $S$ y lo denotamos con $\mathcal{P}(S)$ 
+\end{definicion}
+
+Sin este axioma estaríamos obligados a construir conjuntos <<hacia los lados>>, con el conjunto potencia permitimos que el infinito crezca <<verticalmente>>. Además este axioma es el que nos permite construir los sistemas numéricos básicos mediante la Jerarquía de von Neumann.
+
+\begin{axioma}[Infinitud]\label{axm2.7}
+    Un conjunto \textit{inductivo} existe.
+\end{axioma}
+
+Revisitaremos el axioma de Infinidad con más profundidad más adelante, los conjuntos inductivos se definirán después ya que son muy importantes para definir el conjunto de los números naturales $\mathbb{N}$ 
+
+\begin{axioma}[Esquema de reemplazo]\label{axm2.8}
+    Sea $P(x, y)$ una propiedad tal que para cada $x$, hay un $y$ único para el cual $P(x, y)$ es verdad. Para cada conjunto $A$, existe un conjunto $B$ tal que para cada $x \in A$, existe $y \in B$ para el cual $P(x, y)$ es verdad. 
+\end{axioma}
+
+Básicamente este axioma construye las \textit{funciones}, nos ayuda a crear una <<bolsa>> para las \textit{imágenes} $y$. La diferencia con el Esquema de comprensión se puede describir así:
+
+\begin{itemize}
+    \item \textbf{Comprensión:} <<Tengo una bolsa $A$, saco los elementos que me gustan y hago con ellos una nueva bolsa $B$>>.
+    \item \textbf{Reemplazo:} <<Tengo una bolsa $A$, tomo cada elemento, lo transformo en algo nuevo (un $y$) y pongo esos nuevos objetos en una bolsa $B$>>.
+\end{itemize}
+
+\begin{definicion}\label{dfn2.7}
+    La \textit{unión} de dos conjuntos $A$ y $B$ es el conjunto de todos los $x$ que pertenecen ya sea en $A, B$ o en ambos. Lo denotamos por $A \cup B$.
+\end{definicion}
+
+\begin{definicion}\label{dfn2.8}
+    La \textit{intersección} de dos conjuntos $A$ y $B$ es el conjunto de todos los $x$ que pertenecen tanto a $A$ como a $B$. Lo denotamos por $A \cap B$.  
+\end{definicion}
+
+\begin{definicion}\label{dfn2.9}
+    La \textit{diferencia} de dos conjuntos $A$ y $B$ es el conjunto de todos los $x \in A$ tal que $x \not\in B$. Lo denotamos por $A - B$.
+\end{definicion}
+
+\begin{proposicion}\label{prop2.1}
+    Dados dos conjuntos cualesquiera $A$ y $B$, el conjunto $A \cup B$ existe y es único. 
+\end{proposicion}
+
+\begin{proof}
+    Por el \cref{axm2.4}, para cualquier $A$ y $B$ existe un conjunto $S$ tal que $S = \left\{ A, B \right\}$. Por el \cref{axm2.5}, para este conjunto $S$, existe un conjunto $U$ tal que $x \in U \iff \exists K \in S: x \in K$. Como los únicos elementos $K$ de $S$ son $A$ y $B$, la condición se traduce en $x \in U \iff x \in A \lor x \in B$. Este conjunto $U$ es, por definición $A \cup B$. Ahora, supongamos que existen dos conjuntos $U$ y $U'$ que cumplen la misma propiedad. Entonces, $x \in U \iff \left( x \in A \lor x \in B \right) \iff x \in U'$. Por el \cref{axm2.2}, tenemos $U = U'$. Por lo tanto $A \cup B$ existe y es único.
+\end{proof}
+
+\begin{proposicion}\label{prop2.2}
+    Dados dos conjuntos cualesquiera $A$ y $B$, el conjunto $A \cap B$ existe y es único. 
+\end{proposicion}
+
+\begin{proof}
+    Consideramos el conjunto $A$ y la propiedad $P(x) \equiv x \in B$. Por el \cref{axm2.3}, existe un conjunto $C$ tal que $x \in C \iff x \in A \land P(x)$. Sustituyendo la propiedad, tenemos $x \in C \iff x \in A \land x \in B$. Este conjunto $C$ es, por definición, $A \cap B$. Ahora, si existiera otro conjunto $C'$ con lo misma propiedad, entonces para todo $x, \left( x \in A \land x \in B \right) \iff x \in C \iff x \in C'$. Por el \cref{axm2.2}, $C = C'$. Por lo tanto $A \cap B$ existe y es único. 
+\end{proof}
+
+\begin{proposicion}\label{prop2.3}
+    Dados dos conjuntos cualesquiera $A$ y $B$, el conjunto $A - B$ existe y es único. 
+\end{proposicion}
+
+\begin{proof}
+    Consideramos el conjunto $A$ y la propiedad $Q(x) \equiv x \not\in B$. Por el \cref{axm2.3}, existe un conjunto $D$ tal que $x \in D \iff x \in A \land Q(x)$. Sustituyendo la propiedad, tenemos que $x \in D \iff x \in A \land x \not\in B$. Este conjunto $D$ es, por definición, $A - B$. Y nuevamente, por el \cref{axm2.2}, el conjunto es único.
+\end{proof}
+
+\subsection{Relaciones y funciones}
