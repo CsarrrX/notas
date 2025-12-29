@@ -30,7 +30,6 @@ En razonamiento matemático, solo nos importa la \textbf{verdad}, no tanto la ut
 Los enunciados son diferentes de las \textit{expresiones}. Como ya vimos los enunciados son verdaderos o falsos, mientras que las expresiones son \textit{secuencias} de caracteres matemáticos que producen un objeto matemático, por ejemplo, $2 \cdot 3 + 5$ es una expresión cuyo resultado es un número. Mientras que $ 2 \cdot 3 + 5 = 9$ es un enunciado, no una expresión. Como con los enunciados, las expresiones pueden ser bien o mal definidas, $2 + \frac{3}{0}$ es una expresión mal-definida. Ejemplos más sutiles de expresiones así ocurren, por ejemplo, cuando intentamos multiplicar matrices con dimensiones mal definidas, evaluamos funciones fuera de su dominio, etc. 
 Podemos crear enunciados con expresiones al hacer uso de \textit{relaciones} (como $=, <, \in$, etc.) o propiedades (como: <<es primo>>, <<es continua>>, <<es invertible>>, etc.), por ejemplo, <<$3 + 2$ es un número primo>> o $3 + 28 < 40$ son enunciados matemáticos.
 También podemos crear una \textit{proposición compuesta} usando enunciados más primitivos al \textit{conectarlos lógicamente}. 
-% Fin de la subsección 
 
 \section{Conectores lógicos} 
 
@@ -55,7 +54,6 @@ En lógica matemática, los conectores lógicos constituyen las herramientas fun
 \begin{definicion}[Negación ($\neg$)]
     Si $p$ es un enunciado, la proposición <<$p$ no es verdadero>> es verdadera si y solo si $p$ es falso, y es falsa si y solo si $p$ es verdadero. La negación se presenta bastante en matemáticas (por ejemplo para demostrar por contradicción), gracias a esto ahora se presentan las reglas de la negación y ejemplos de negación de proposiciones.   
 \end{definicion}
-
 
 Primero, la negación convierte la conjunción en disyunción y viceversa, por ejemplo, la proposición <<($p$ y $q$) es falsa>> se convierte en <<$p$ es falsa o $q$ es falsa>> (nótese que también invierte el valor de verdad de los enunciados), y de la misma forma si tenemos <<($p$ o $q$) es falsa>> se convierte en <<$p$ es falsa y $q$ es falsa>>. Otra regla es que la doble negación se cancela, es decir, si tenemos un enunciado $p$ y la proposición <<$p$ es falso>>, la negación de esta proposición es <<$p$ es verdadero>>. 
 
@@ -103,15 +101,9 @@ Un error común al demostrar una implicación es asumir la conclusión para lleg
     (Incorrecta) $x = 2$; entonces $2x = 4$; entonces $2x + 3 = 7$
 \end{proof}
 
-A partir del condicional simple, podemos derivar dos estructuras que no añaden conceptos nuevos, sino que reinterpretan la relación de implicación:
-\begin{flalign*}
-    &\text{1. \textbf{Bicondicional:}} \quad p \iff q \quad \equiv \quad (p \implies q) \land (q \implies p) &
-\end{flalign*}
-Decimos que $p$ y $q$ son \textit{lógicamente equivalentes}. Esto significa que ambos enunciados están <<atados>>: si uno es verdadero, el otro obligatoriamente lo es; y si uno es falso, el otro también.
-\begin{flalign*}
-    &\text{2. \textbf{Contrapositiva:}} \quad \neg q \implies \neg p \quad \equiv \quad p \implies q &
-\end{flalign*}
-Esta es simplemente una \textit{re-escritura} de la implicación. En matemáticas, la contrapositiva es la <<puerta trasera>> de las demostraciones: si no puedes probar que $p$ conduce a $q$, puedes probar que la ausencia de $q$ implica la ausencia de $p$. Ambas afirmaciones contienen exactamente la misma información lógica.
+\textbf{Recíproca:} La recíproca de una implicación $p \implies q$ es la proposición $q \implies p$. Es fundamental entender que la veracidad de una implicación no garantiza la veracidad de su recíproca. De hecho, confundir ambas es uno de los errores más comunes en las demostraciones. Cuando tanto la implicación ($p \implies q$) como su recíproca ($q \implies p$) son verdaderas, decimos que los enunciados son lógicamente equivalentes, lo cual se denota con el conector de doble implicación ($p \iff q$). \newline
+
+\textbf{Contrapositiva:} La contrapositiva es una equivalencia lógica fundamental que establece que una implicación es lógicamente igual a la negación de sus términos en orden inverso, expresándose formalmente como $(p \implies q) \equiv (\neg q \implies \neg p)$. En términos de razonamiento, esto significa que si la veracidad de un antecedente garantiza un consecuente, la ausencia de dicho consecuente implica necesariamente la ausencia del antecedente original.
 
 \begin{nota}
     La contrapositiva es una forma equivalente de expresar el ejemplo anterior: <<si el suelo no está mojado, entonces no llueve>> ($\neg q \implies \neg p$). Podemos entender su validez analizando los mismos escenarios:
