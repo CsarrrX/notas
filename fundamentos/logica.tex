@@ -76,7 +76,7 @@ Hemos llegado al conector lógico menos intuitivo, la \textbf{implicación} ($\i
 
 \begin{nota}
     Una forma más intuitiva de entenderlo es con un ejemplo. Sean $p$: <<llueve>> y $q$: <<el suelo está mojado>>. La implicación <<si $p$, entonces $q$>> funciona como una regla o promesa:
-    \begin{itemize}
+    \begin{itemize}[noitemsep]
         \item Si llueve ($p$ es V) y el suelo está mojado ($q$ es V), la regla se cumple: la implicación es \textbf{verdadera}.
         \item Si llueve ($p$ es V) pero el suelo está seco ($q$ es F), la regla se ha roto: la implicación es \textbf{falsa}.
         \item Si no llueve ($p$ es F), la regla no dice nada sobre el suelo. No importa si está mojado o seco, la afirmación original no ha sido contradicha, por lo que la implicación se considera \textbf{verdadera} por defecto.
@@ -105,7 +105,7 @@ Un error común al demostrar una implicación es asumir la conclusión para lleg
 
 Hay casos particulares y equivalencias de implicación, por ejemplo:
 
-\begin{itemize}
+\begin{itemize}[noitemsep]
     \item \textbf{Bicondicional:} En el caso especial donde $p$ implica $q$ y, simultáneamente, $q$ implica $p$, utilizamos el conector \textit{bicondicional}: <<$p$ si y solo si $q$>> ($p \iff q$). Esto indica que ambas proposiciones tienen siempre el mismo valor de verdad.
     
     \item \textbf{Contrapositiva:} Una equivalencia lógica fundamental de la implicación $p \implies q$ es su \textit{contrapositiva}. Esta establece que la afirmación <<si $p$, entonces $q$>> es equivalente a decir <<si $q$ es falsa, entonces $p$ también debe serlo>> ($\neg q \implies \neg p$). 
@@ -113,7 +113,7 @@ Hay casos particulares y equivalencias de implicación, por ejemplo:
 
 \begin{nota}
     La contrapositiva es una forma equivalente de expresar el ejemplo anterior: <<si el suelo no está mojado, entonces no llueve>> ($\neg q \implies \neg p$). Podemos entender su validez analizando los mismos escenarios:
-    \begin{itemize}
+    \begin{itemize}[noitemsep]
         \item Si el suelo está seco ($\neg q$ es V) y efectivamente no llueve ($\neg p$ es V), la regla se cumple: la implicación es \textbf{verdadera}.
         \item Si el suelo está seco ($\neg q$ es V) pero resulta que está lloviendo ($\neg p$ es F), la regla se ha roto: la implicación es \textbf{falsa}.
         \item Si el suelo está mojado ($\neg q$ es F), la regla no impone ninguna condición. No importa si llueve o no, la afirmación no puede ser desmentida porque solo hablaba del caso en que el suelo estuviera seco. Por tanto, la implicación se considera \textbf{verdadera}.
@@ -180,17 +180,17 @@ Como se puede ver hay muchos enfoques para resolver problemas, sin embargo en al
 
 Uno puede llegar muy lejos usando solamente enunciados primitivos (como $2 + 2 = 4$ o <<yo tengo el pelo blanco>>), conectándolos con lógica, y construyendo hipótesis y conclusiones a base de ello, a esto se le conoce como \textit{lógica booleana}. Sin embargo para la matemática este nivel de lógica no es suficiente, ya que no contiene el concepto fundamental de las \textit{variables}, una \textit{variable} es un símbolo, como $x$ o $n$ que denota un objeto matemático (un entero, vector, función, matriz, etc.) casi en todas las situaciones el \textit{tipo} del objeto debería de declararse, de otra forma, sería difícil formar enunciados bien-definidos a partir de ellos. Además, podemos formar expresiones y enunciados con estas variables, por ejemplo si $x$ es un número real, $x + 3$ es una expresión y $x + 3 = 5$ es un enunciado. Sin embargo, la veracidad del enunciado está ligada a la variable, en este caso tenemos que el enunciado es verdadero \textbf{si y solo si} $x = 2$. Una \textbf{variable libre} es un símbolo cuyo valor no está especificado (ej. $x+3=5$), por lo que la expresión carece de un valor de verdad definido. En contraste, una \textbf{variable ligada} ocurre cuando se fija su valor (ej. "Sea $x=2$") o se limita mediante cuantificadores, otorgando al enunciado un valor de verdad definido.
 
-\begin{itemize}
+\begin{itemize}[noitemsep]
     \item \textbf{Cuantificador Universal ($\forall$):} La proposición $\forall x \in T, P(x)$ significa que $P(x)$ es verdadero para todo elemento de tipo $T$. Se demuestra asumiendo un $x$ arbitrario y se refuta con un solo \textbf{contraejemplo}. Si no existen elementos en $T$, la proposición es \textbf{vacuamente verdadera}.
     \item \textbf{Cuantificador Existencial ($\exists$):} La proposición $\exists x \in T : P(x)$ significa que existe al menos un $x$ para el cual $P(x)$ es verdadero. Basta con exhibir un ejemplo específico para probarla.
 \end{itemize}
 
 Decir que algo es cierto para todo $x$ es una afirmación mucho más fuerte que decir que es cierto para algún $x$, excepto cuando el dominio es vacío (donde el $\forall$ es vacuo y el $\exists$ es falso). Ya habíamos hablado de negación de ciertos tipos de conectores lógicos, ahora tenemos que la negación de una proposición universal produce una existencial y viceversa:
-\begin{itemize}
+\begin{itemize}[noitemsep]
     \item $\neg(\forall x, P(x)) \iff \exists x, \neg P(x)$: Negar que todos los cisnes son blancos equivale a decir que existe al menos uno que no lo es.
     \item $\neg(\exists x, P(x)) \iff \forall x, \neg P(x)$: Negar la existencia de un cisne negro equivale a decir que todos los cisnes no son negros.
 \end{itemize}
-\begin{itemize}
+\begin{itemize}[noitemsep]
     \item $\neg(\forall x, P(x)) \iff \exists x, \neg P(x)$.
     \item $\neg(\exists x, P(x)) \iff \forall x, \neg P(x)$.
 \end{itemize}
@@ -200,7 +200,7 @@ El orden de los cuantificadores es fundamental para el significado de una propos
 
 \begin{proposicion}[Conmutatividad]
 El orden es irrelevante si los cuantificadores son del mismo tipo:
-\begin{itemize}
+\begin{itemize}[noitemsep]
     \item $\forall x \forall y \, P(x, y) \equiv \forall y \forall x \, P(x, y)$
     \item $\exists x \exists y \, P(x, y) \equiv \exists y \exists x \, P(x, y)$
 \end{itemize}
@@ -208,7 +208,7 @@ El orden es irrelevante si los cuantificadores son del mismo tipo:
 
 \begin{ejemplo}[Cuantificadores Mixtos]
 Si se combinan $\forall$ y $\exists$, el orden es crítico porque define la \textbf{dependencia} de las variables. Sea el dominio $\mathbb{Z}$:
-\begin{itemize}
+\begin{itemize}[noitemsep]
     \item $\forall n \exists m (m > n)$: \textbf{Verdadero}. Para cada $n$, existe un $m$ que puede depender de $n$ (ej. $m = n + 1$).
     \item $\exists m \forall n (m > n)$: \textbf{Falso}. Implicaría la existencia de un entero $m$ fijo que es mayor que todos los demás.
 \end{itemize}
@@ -239,7 +239,7 @@ La igualdad es una relación entre dos objetos $x, y$ del mismo tipo $T$. Su ver
 \end{axioma}
 
 Por ejemplo tenemos: 
-\begin{itemize}
+\begin{itemize}[noitemsep]
     \item Si $x, y \in \mathbb{R}$ y $x = y$, entonces $x + z = y + z$ para cualquier $z$.
     \item Si $n, m \in \mathbb{Z}$, $n$ es impar y $n = m$, entonces $m$ es impar.
     \item Si $x = \sin(y)$ y $y = z^2$, por sustitución $\sin(y) = \sin(z^2)$, y por transitividad $x = \sin(z^2)$.
