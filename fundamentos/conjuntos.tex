@@ -102,7 +102,7 @@ Sin este axioma estaríamos obligados a construir conjuntos <<hacia los lados>>,
     Un conjunto \textit{inductivo} existe.
 \end{axioma}
 
-Revisitaremos el axioma de Infinidad con más profundidad más adelante, los conjuntos inductivos se definirán después ya que son muy importantes para definir el conjunto de los números naturales $\mathbb{N}$ 
+Revisitaremos el axioma de Infinitud con más profundidad más adelante, los conjuntos inductivos se definirán después ya que son muy importantes para definir el conjunto de los números naturales $\mathbb{N}$ 
 
 \begin{axioma}[Esquema de reemplazo]\label{axm2.8}
     Sea $P(x, y)$ una propiedad tal que para cada $x$, hay un $y$ único para el cual $P(x, y)$ es verdad. Para cada conjunto $A$, existe un conjunto $B$ tal que para cada $x \in A$, existe $y \in B$ para el cual $P(x, y)$ es verdad. 
@@ -152,3 +152,15 @@ Básicamente este axioma construye las \textit{funciones}, nos ayuda a crear una
 \end{proof}
 
 \section{Relaciones y funciones}
+
+\begin{definicion}\label{dfn2.10}
+    Un \textit{par ordenado} $\left( a, b \right)$ se define como $\left\{ \left\{ a \right\}, \left\{ a, b \right\} \right\}$
+\end{definicion}
+
+Ya que los conjuntos son no ordenados $\left\{ a, b \right\} = \left\{ b, a \right\}$, esta definición nos permite expresar pares ordenados como un único conjunto unitario $\left\{ a \right\}$ y un conjunto no ordenado $\left\{ a, b \right\}$. Usando este sistema podemos definir hasta n-uplas ordenadas.
+
+\begin{definicion}\label{dfn2.11}
+    Un conjunto $R$ es una \textit{relación binaria} si todos los elementos de $R$ son pares ordenados. (es decir, para $z \in R$, existen $x, y$ tal que $z = \left( x, y \right)$). Podemos denotar $\left( x, y \right) \in R$ como $xRy$, y decir que $x$ esta en relación $R$ con $y$ si $xRy$ es verdad.
+\end{definicion}
+
+
