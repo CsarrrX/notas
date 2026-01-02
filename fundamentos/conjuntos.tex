@@ -204,7 +204,15 @@ Ya que los conjuntos son no ordenados $\left\{ a, b \right\} = \left\{ b, a \rig
     Por el \cref{axm2.2} $C = C'$. Por lo tanto $A \times B$ existe y es único.
 \end{proof}
 
+\begin{definicion}\label{dfn2.14b}
+Sea $R$ una relación. El \textbf{dominio} de $R$ es el conjunto $dom(R) = \{a : \exists b, (a, b) \in R\}$. El \textbf{rango} de $R$ es el conjunto $ran(R) = \{b : \exists a, (a, b) \in R\}$.
+\end{definicion}
+
 \subsection{Funciones} 
 
+Hasta ahora, las relaciones binarias permiten que un elemento $a$ se vincule con múltiples elementos $b$ (como la relación "ser hermano de"). Una función es simplemente una relación binaria con una restricción de unicidad: a cada elemento del dominio le corresponde exactamente un elemento del rango. En términos de conjuntos, una función no es una "regla de transformación", sino un conjunto de pares ordenados donde no existen dos pares con el mismo primer componente y distinto segundo componente.
 
+\begin{definicion}\label{dfn2.15}
+    Una relación binaria $F$ es llamada una \textit{función} si $aFb_1$ y $aFb_2$ implican $b_1 = b_2$ para cualesquieran $a, b_1, b_2$. Esta única $b$ es el valor de $F$ en $a$ y se denota $F(a)$ o $F_a$. Si $dom(F) = A$ y $ran(F) \subseteq B$, podemos denotar $F$ como $F: A \to B$.
+\end{definicion}
 

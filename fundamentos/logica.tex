@@ -72,15 +72,6 @@ El dominio de la negación de proposiciones se da practicándola, no es algo par
 
 Hemos llegado al conector lógico menos intuitivo, la \textbf{implicación} ($\implies$). Si $p$ y $q$ son enunciados, entonces la proposición <<si $p$ entonces $q$>> es la implicación de $p$ a $q$. El significado de la proposición <<si $p$, entonces $q$>> depende de si $p$ es verdadero o falso. Si $p$ es verdadero, entonces <<si $p$, entonces $q$>> es verdadero cuando $q$ es verdadero, y falso cuando $q$ es falso. Si, por el contrario, $p$ es falso, entonces <<si $p$, entonces $q$>> es siempre verdadero, independientemente de si $q$ es verdadero o falso. Dicho de otra manera, cuando $p$ es verdadero, la proposición <<si $p$, entonces $q$>> implica que $q$ es verdadero. Pero cuando $p$ es falso, la proposición <<si $p$, entonces $q$>> no ofrece información sobre si $q$ es verdadero o no; la proposición es verdadera, pero vacua (es decir, no transmite ninguna información nueva más allá del hecho de que la hipótesis es falsa).
 
-\begin{nota}
-    Una forma más intuitiva de entenderlo es con un ejemplo. Sean $p$: <<llueve>> y $q$: <<el suelo está mojado>>. La implicación <<si $p$, entonces $q$>> funciona como una regla o promesa:
-    \begin{itemize}[noitemsep]
-        \item Si llueve ($p$ es V) y el suelo está mojado ($q$ es V), la regla se cumple: la implicación es \textbf{verdadera}.
-        \item Si llueve ($p$ es V) pero el suelo está seco ($q$ es F), la regla se ha roto: la implicación es \textbf{falsa}.
-        \item Si no llueve ($p$ es F), la regla no dice nada sobre el suelo. No importa si está mojado o seco, la afirmación original no ha sido contradicha, por lo que la implicación se considera \textbf{verdadera} por defecto.
-    \end{itemize}
-\end{nota}
-
 Para demostrar una implicación, la manera usual de hacerlo es primero asumir que la hipótesis es verdadera y usar esto (junto con otros hechos e hipótesis verdaderas que conozcas) para deducir la conclusión. Este procedimiento es perfectamente válido, incluso si la hipótesis resulta falsa después; la implicación no garantiza nada acerca de la veracidad de la hipótesis, y solo garantiza la veracidad de la conclusión dado condicionalmente que la hipótesis sea verdadera. Por ejemplo, la demostración de la siguiente proposición es verdadera aunque tanto la hipótesis como la conclusión son falsas:
 
 \begin{proposicion}
@@ -104,15 +95,6 @@ Un error común al demostrar una implicación es asumir la conclusión para lleg
 \textbf{Recíproca:} La recíproca de una implicación $p \implies q$ es la proposición $q \implies p$. Es fundamental entender que la veracidad de una implicación no garantiza la veracidad de su recíproca. De hecho, confundir ambas es uno de los errores más comunes en las demostraciones. Cuando tanto la implicación ($p \implies q$) como su recíproca ($q \implies p$) son verdaderas, decimos que los enunciados son lógicamente equivalentes, lo cual se denota con el conector de doble implicación ($p \iff q$). 
 
 \textbf{Contrapositiva:} La contrapositiva es una equivalencia lógica fundamental que establece que una implicación es lógicamente igual a la negación de sus términos en orden inverso, expresándose formalmente como $(p \implies q) \equiv (\neg q \implies \neg p)$. En términos de razonamiento, esto significa que si la veracidad de un antecedente garantiza un consecuente, la ausencia de dicho consecuente implica necesariamente la ausencia del antecedente original.
-
-\begin{nota}
-    La contrapositiva es una forma equivalente de expresar el ejemplo anterior: <<si el suelo no está mojado, entonces no llueve>> ($\neg q \implies \neg p$). Podemos entender su validez analizando los mismos escenarios:
-    \begin{itemize}[noitemsep]
-        \item Si el suelo está seco ($\neg q$ es V) y efectivamente no llueve ($\neg p$ es V), la regla se cumple: la implicación es \textbf{verdadera}.
-        \item Si el suelo está seco ($\neg q$ es V) pero resulta que está lloviendo ($\neg p$ es F), la regla se ha roto: la implicación es \textbf{falsa}.
-        \item Si el suelo está mojado ($\neg q$ es F), la regla no impone ninguna condición. No importa si llueve o no, la afirmación no puede ser desmentida porque solo hablaba del caso en que el suelo estuviera seco. Por tanto, la implicación se considera \textbf{verdadera}.
-    \end{itemize}
-\end{nota}
 
 \textbf{Reducción al absurdo:} Una aplicación directa de la implicación es que si $p$ implica algo que sabemos que es falso, entonces $p$ mismo debe ser falso. Este es el principio de la \textit{reductio ad absurdum}: para demostrar que una afirmación es falsa, asumimos primero que es verdadera y mostramos que esto conduce a una contradicción lógica (un enunciado que es simultáneamente verdadero y falso). Por ejemplo:
 

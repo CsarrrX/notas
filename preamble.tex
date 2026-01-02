@@ -13,8 +13,9 @@
 \usepackage{amsthm}     
 \usepackage{mathtools}
 \usepackage{cleveref}
+\usepackage{parskip}
 
-% --- GRÁFICOS (INKSCAPE SETUP) ---
+% --- GRÁFICOS ---
 \usepackage{graphicx}
 \usepackage{enumitem}
 \usepackage{import}
@@ -23,12 +24,6 @@
 \usepackage{microtype}
 \usepackage{xcolor}
 \usepackage{float}
-
-% Comando para importar figuras de Inkscape
-\newcommand{\incfig}[1]{%
-    \def\svgwidth{\columnwidth}
-    \import{./figures/}{#1.pdf_tex}
-}
 
 \pdfsuppresswarningpagegroup=1
 
@@ -54,7 +49,7 @@
   linewidth=0.6pt,
   linecolor=black,
   roundcorner=0pt,
-  innertopmargin=0pt,    % Espacio interno superior para evitar colapso
+  innertopmargin=6pt,    % Espacio interno superior para evitar colapso
   innerbottommargin=6pt,
   innerleftmargin=10pt,
   innerrightmargin=10pt,
