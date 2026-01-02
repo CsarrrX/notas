@@ -19,10 +19,6 @@ Cabe notar que no toda combinación de símbolos matemáticos es un enunciado ma
 Un argumento matemático no debe contener ningún enunciado mal formado, entonces, si por ejemplo tenemos la expresión $\frac{x}{y} = z$ tenemos que asegurarnos $y \neq 0$.
 Es importante señalar que, en la lógica matemática, la veracidad o falsedad de un enunciado es una propiedad inherente del mismo y no depende de la opinión de quien lo enuncia o interpreta. Esta característica junto con el valor de verdad bien definido de los enunciados fundamenta un método clásico de demostración: para establecer la veracidad de un enunciado, puede suponerse su falsedad y, a partir de dicha suposición, derivar una contradicción lógica (el método se abarca más adelante).
 
-\begin{nota}
-    Básicamente, para demostrar que un enunciado es verdadero, basta con demostrar que no es falso, y de la misma forma, para demostrar que falso, basta con demostrar que no es verdadero.
-\end{nota}
-
 Ahora, que un enunciado sea verdadero, no significa que sea útil o eficiente. Por ejemplo el enunciado $2 = 2$ es verdadero, pero esta lejos de ser algo útil. O el enunciado $4 \leq 4$ también es verdadero, pero no muy eficiente ($4 = 4$ es más preciso). Y viceversa, un enunciado puede ser falso pero muy útil, por ejemplo $\pi = 3.1416$ es falso, sin embargo es muy útil como una \textit{aproximación}. 
 
 En razonamiento matemático, solo nos importa la \textbf{verdad}, no tanto la utilidad ni eficiencia; esto ya que la verdad es objetiva, podemos deducir enunciados verdaderos de reglas precisas, mientras que la utilidad y eficiencia subjetivas, dependen de la opinión del observador.
@@ -36,7 +32,7 @@ También podemos crear una \textit{proposición compuesta} usando enunciados má
 En lógica matemática, los conectores lógicos constituyen las herramientas fundamentales para construir y analizar proposiciones compuestas a partir de enunciados simples. Mediante estos operadores es posible formalizar relaciones como la conjunción, la disyunción, la implicación y la negación, permitiendo expresar razonamientos de manera precisa y rigurosa. A continuación se presentan los más utilizados. 
 
 \begin{nota}
-    Aunque en esencia un enunciado y una proposición son lo mismo, en estas notas nos referiremos a \textit{proposiciones} como enunciados un poco más complejos, sucesiones de enunciados más primitivos conectados lógicamente.
+    Aunque en esencia un enunciado y una proposición son lo mismo, en estas notas las \textit{proposiciones} son enunciados más complejos, enunciados primitivos conectados lógicamente.
 \end{nota}
 
 \begin{definicion}[Conjunción ($\land$)]
@@ -46,10 +42,6 @@ En lógica matemática, los conectores lógicos constituyen las herramientas fun
 \begin{definicion}[Disyunción ($\lor$)]
     Si $p$ es un enunciado y $q$ es un enunciado, entonces la proposición <<$p$ o $q$>> es verdadera si uno de los dos es verdadero (o ambos) y falsa solo cuando ambos son falsos. Por ejemplo, la proposición $2 + 2 = 1$ o $3 + 2 = 0$ es falsa, mientras que $2 = 2$ o $0 = 5$ es verdadera. 
 \end{definicion}
-
-\begin{nota}
-    También existe el <<o exclusivo>>, en este solo nos interesa que UNO de los enunciados sea verdadero, si ambos son verdaderos entonces la proposición es falsa. 
-\end{nota}
 
 \begin{definicion}[Negación ($\neg$)]
     Si $p$ es un enunciado, la proposición <<$p$ no es verdadero>> es verdadera si y solo si $p$ es falso, y es falsa si y solo si $p$ es verdadero. La negación se presenta bastante en matemáticas (por ejemplo para demostrar por contradicción), gracias a esto ahora se presentan las reglas de la negación y ejemplos de negación de proposiciones.   
@@ -92,9 +84,9 @@ Un error común al demostrar una implicación es asumir la conclusión para lleg
     (Incorrecta) $x = 2$; entonces $2x = 4$; entonces $2x + 3 = 7$
 \end{proof}
 
-\textbf{Recíproca:} La recíproca de una implicación $p \implies q$ es la proposición $q \implies p$. Es fundamental entender que la veracidad de una implicación no garantiza la veracidad de su recíproca. De hecho, confundir ambas es uno de los errores más comunes en las demostraciones. Cuando tanto la implicación ($p \implies q$) como su recíproca ($q \implies p$) son verdaderas, decimos que los enunciados son lógicamente equivalentes, lo cual se denota con el conector de doble implicación ($p \iff q$). 
+\textbf{Recíproca:} La recíproca de una implicación $p \implies q$ es la proposición $q \implies p$. Es fundamental entender que la veracidad de una implicación no garantiza la veracidad de su recíproca. De hecho, confundir ambas es uno de los errores más comunes en las demostraciones. Cuando tanto la implicación ($p \implies q$) como su recíproca ($q \implies p$) son verdaderas, decimos que los enunciados son lógicamente equivalentes, lo cual se denota con el conector de doble implicación ($p \iff q$). \medskip
 
-\textbf{Contrapositiva:} La contrapositiva es una equivalencia lógica fundamental que establece que una implicación es lógicamente igual a la negación de sus términos en orden inverso, expresándose formalmente como $(p \implies q) \equiv (\neg q \implies \neg p)$. En términos de razonamiento, esto significa que si la veracidad de un antecedente garantiza un consecuente, la ausencia de dicho consecuente implica necesariamente la ausencia del antecedente original.
+\textbf{Contrapositiva:} La contrapositiva es una equivalencia lógica fundamental que establece que una implicación es lógicamente igual a la negación de sus términos en orden inverso, expresándose formalmente como $(p \implies q) \equiv (\neg q \implies \neg p)$. En términos de razonamiento, esto significa que si la veracidad de un antecedente garantiza un consecuente, la ausencia de dicho consecuente implica necesariamente la ausencia del antecedente original. \medskip
 
 \textbf{Reducción al absurdo:} Una aplicación directa de la implicación es que si $p$ implica algo que sabemos que es falso, entonces $p$ mismo debe ser falso. Este es el principio de la \textit{reductio ad absurdum}: para demostrar que una afirmación es falsa, asumimos primero que es verdadera y mostramos que esto conduce a una contradicción lógica (un enunciado que es simultáneamente verdadero y falso). Por ejemplo:
 
@@ -106,6 +98,10 @@ Un error común al demostrar una implicación es asumir la conclusión para lleg
     \textbf{Asumimos lo contrario:} supongamos que existe un número entero $N$ mayor que todos los demás. \textbf{Derivamos una consecuencia y un absurdo (contradicción):} por propiedades numéricas sabemos que $N + 1$ es un número mayor y es entero, entonces llegamos a que $N$ es el entero más grande y al mismo tiempo no es el entero más grande. Por lo tanto no puede existir un número entero más grande que todos los demás. 
 \end{proof}
 
+\begin{nota}
+    Este método también se conoce como demostración por contradicción y lo veremos a detalle más adelante. Es importante añadir que, aunque usar los conectores lógicos parezca sencillo, muchas veces los aplicamos de forma incorrecta sin darnos cuenta. Por eso, es fundamental practicar con ejercicios de lógica y tablas de verdad; cualquier libro de matemáticas elementales incluye estas herramientas, que son ideales para evitar errores de razonamiento y entender bien cómo funcionan estas estructuras.
+\end{nota}
+
 \section{La estructura de las demostraciones}
 
 Para demostrar una proposición, uno normalmente empieza asumiendo la hipótesis y avanzando hacia la conclusión; esta es el enfoque \textit{directo} para demostrar una proposición. Por ejemplo:
@@ -115,7 +111,7 @@ Para demostrar una proposición, uno normalmente empieza asumiendo la hipótesis
 \end{proposicion}
 
 \begin{proof}
-    Asumimos $A$ es verdadero. Como $A$ es verdadero, $C$ es verdadero. Como $C$ es verdadero, $D$ es verdadero. Como $D$ es verdadero, $B$ es verdadero, como queríamos. 
+    Asumimos $A$ es verdadero. Como $A$ es verdadero, $C$ es verdadero. Como $C$ es verdadero, $D$ es verdadero. Como $D$ es verdadero, $B$ es verdadero. 
 \end{proof}
 
 Pero esta no es la única forma de demostrar esto, también podemos trabajar desde la conclusión (nunca asumiéndola como verdadera) y viendo que se necesitaría para que se cumpliera la implicación. Por ejemplo una demostración típica de \cref{prop1} se vería así:
@@ -154,7 +150,7 @@ Como se puede ver hay muchos enfoques para resolver problemas, sin embargo en al
 
 \section{Variables y cuantificadores}
 
-Uno puede llegar muy lejos usando solamente enunciados primitivos (como $2 + 2 = 4$ o <<yo tengo el pelo blanco>>), conectándolos con lógica, y construyendo hipótesis y conclusiones a base de ello, a esto se le conoce como \textit{lógica booleana}. Sin embargo para la matemática este nivel de lógica no es suficiente, ya que no contiene el concepto fundamental de las \textit{variables}, una \textit{variable} es un símbolo, como $x$ o $n$ que denota un objeto matemático (un entero, vector, función, matriz, etc.) casi en todas las situaciones el \textit{tipo} del objeto debería de declararse, de otra forma, sería difícil formar enunciados bien-definidos a partir de ellos. Además, podemos formar expresiones y enunciados con estas variables, por ejemplo si $x$ es un número real, $x + 3$ es una expresión y $x + 3 = 5$ es un enunciado. Sin embargo, la veracidad del enunciado está ligada a la variable, en este caso tenemos que el enunciado es verdadero \textbf{si y solo si} $x = 2$. Una \textbf{variable libre} es un símbolo cuyo valor no está especificado (ej. $x+3=5$), por lo que la expresión carece de un valor de verdad definido. En contraste, una \textbf{variable ligada} ocurre cuando se fija su valor (ej. "Sea $x=2$") o se limita mediante cuantificadores, otorgando al enunciado un valor de verdad definido.
+Uno puede llegar muy lejos usando solamente enunciados primitivos (como $2 + 2 = 4$ o <<yo tengo el pelo blanco>>), conectándolos con lógica, y construyendo hipótesis y conclusiones a base de ello, a esto se le conoce como \textit{lógica booleana}. Sin embargo para la matemática este nivel de lógica no es suficiente, ya que no contiene el concepto fundamental de las \textit{variables}, una \textit{variable} es un símbolo, como $x$ o $n$ que denota un objeto matemático (un entero, vector, función, matriz, etc.) casi en todas las situaciones el \textit{tipo} del objeto debería de declararse, de otra forma, sería difícil formar enunciados bien-definidos a partir de ellos. Además, podemos formar expresiones y enunciados con estas variables, por ejemplo si $x$ es un número real, $x + 3$ es una expresión y $x + 3 = 5$ es un enunciado. Sin embargo, la veracidad del enunciado está ligada a la variable, en este caso tenemos que el enunciado es verdadero \textbf{si y solo si} $x = 2$. Una \textbf{variable libre} es un símbolo cuyo valor no está especificado (ej. $x+3=5$), por lo que la expresión carece de un valor de verdad definido. En contraste, una \textbf{variable ligada} ocurre cuando se fija su valor (ej. <<Sea $x=2$>>) o se limita mediante cuantificadores, otorgando al enunciado un valor de verdad definido.
 
 \begin{definicion}[Cuantificador Universal ($\forall$)]
     La proposición $\forall x \in T, P(x)$ significa que la propiedad $P(x)$ es verdadera para \textbf{todos} los elementos de tipo $T$. Para demostrar su validez, se debe argumentar sobre un $x$ arbitrario; para refutarla, basta con exhibir un solo contraejemplo.
@@ -174,28 +170,7 @@ La negación de estas proposiciones sigue reglas de intercambio fundamentales, c
 \end{equation*}
 
 \subsection{Cuantificadores Anidados}
-El orden de los cuantificadores es fundamental para el significado de una proposición. Se distinguen dos casos principales:
-
-\begin{proposicion}[Conmutatividad]
-El orden es irrelevante si los cuantificadores son del mismo tipo; es decir, las siguientes equivalencias lógicas son válidas:
-\[
-\begin{aligned}
-    \forall x \forall y \, P(x, y) &\equiv \forall y \forall x \, P(x, y) \\
-    \exists x \exists y \, P(x, y) &\equiv \exists y \exists x \, P(x, y)
-\end{aligned}
-\]
-\end{proposicion}
-\begin{ejemplo}[Cuantificadores Mixtos]
-Si se combinan $\forall$ y $\exists$, el orden define la \textbf{dependencia} de las variables. Sea el dominio $\mathbb{Z}$:
-\begin{alignat*}{3}
-    &\forall n \exists m (m > n) \quad && \text{\textbf{Verdadero.}} \quad && \text{Cada $n$ tiene su propio $m$ (ej. $m = n + 1$).} \\
-    &\exists m \forall n (m > n) \quad && \text{\textbf{Falso.}}     \quad && \text{Requeriría un $m$ universalmente superior.}
-\end{alignat*}
-\end{ejemplo}
-
-\begin{nota}
-En la secuencia $\forall x \exists y$, el valor de $y$ se elige \textit{después} de conocer $x$. En $\exists y \forall x$, el valor de $y$ debe ser el mismo para todos los $x$.
-\end{nota}
+El orden de los cuantificadores es irrelevante cuando son del mismo tipo, de modo que $\forall x \forall y P(x, y) \equiv \forall y \forall x P(x, y)$ y $\exists x \exists y P(x, y) \equiv \exists y \exists x P(x, y)$. No obstante, en cuantificadores mixtos el orden es fundamental porque define la dependencia de las variables: en la secuencia $\forall n \exists m (m > n)$ sobre el dominio $\mathbb{Z}$, la afirmación es verdadera porque para cada $n$ se puede elegir un $m$ distinto (como $m = n + 1$), mientras que $\exists m \forall n (m > n)$ es falsa al requerir un único valor de $m$ que sea superior a todo el conjunto. En términos generales, en la secuencia $\forall x \exists y$ el valor de $y$ se elige después de conocer $x$, mientras que en $\exists y \forall x$, la variable $y$ debe ser una constante universal válida para todos los valores de $x$ simultáneamente.
 
 \section{Igualdad}
 
