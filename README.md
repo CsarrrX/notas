@@ -86,19 +86,6 @@ Más abajo se documentan los plugins y snippets principales usados aquí.
 
 Todo esto también está documentado en mis dotfiles.
 
----
-
-### 4. Figuras
-Las figuras se crean usando **Inkscape**, integradas directamente con Neovim mediante Lua.
-
-- Se genera automáticamente la figura
-- Se inserta el entorno `figure` en LaTeX
-- Se abre Inkscape para dibujar
-
-Este flujo se explica en detalle más abajo.
-
----
-
 ## 🚀 Uso del sistema
 
 ### Plugins principales
@@ -186,30 +173,9 @@ Motor de snippets en modo **standalone** para máxima velocidad.
 | `A12` | `A_{12}` |
 | `avv` | `\vec{a}` |
 
+> Existen más snippets, para ver todos tienen que entrar a mis dotfiles
+
 ---
-
-## 🖼️ Figuras con Inkscape (Workflow)
-
-Este sistema permite crear figuras **sin salir de Neovim**.
-
-### Cómo usarlo
-
-1. Presiona: CTRL + f.
-2. Ingresa el nombre de la figura.
-3. Automáticamente:
-- Se crea la carpeta `figures/` si no existe
-- Se crea (o abre) un archivo `.svg`
-- Se inserta en el `.tex`:
-```tex
-\begin{figure}[ht]
- \centering
- \incfig{nombre}
- \caption{nombre}
- \label{fig:nombre}
-\end{figure}
-```
-4. Se abre inkscape con la figura.
-**IMPORTANTE**: antes de cerrar inkscape es necesario exportar la figura a pdf con la opción saltar pdf y generar latex, es necesario para que incfig funcione bien
 
 ### Objetivo final
 - Escribir matemáticas **rápido**
